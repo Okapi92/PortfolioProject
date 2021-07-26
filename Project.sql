@@ -48,6 +48,12 @@ Where continent is not null
 Group by Location
 order by TotalDeathCount desc
 
+--Average Median age by deaths
+Select Location, Population, continent, AVG(median_age) as AverageMedianAge, total_deaths
+From ProjectPortfolio..CovidData
+Group by Location, Population, continent, median_age, total_deaths
+
+
 -- BREAKING THINGS DOWN BY CONTINENT
 
 -- Showing contintents with the highest death count per population
